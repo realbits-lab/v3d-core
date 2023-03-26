@@ -100,3 +100,15 @@ See [this demo video](https://www.youtube.com/watch?v=pQnvU2PVymE).
 see [LICENSE](./LICENSE).
 
 Babylon.js is licensed under [Apache License 2.0](https://github.com/BabylonJS/Babylon.js/blob/master/license.md).
+
+
+## Git Submodule
+- git submodule init
+- git submodule update
+- git submodule status
+
+## Git Submodule Remove
+1. git submodule deinit <your_submodule>
+2. git rm <your_submodule>
+3. git commit-m "Removed submodule"
+4. rm -rf .git/modules/<your_submodule>
