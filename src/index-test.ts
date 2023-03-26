@@ -23,7 +23,7 @@ import {HemisphericLight} from "@babylonjs/core/Lights/hemisphericLight";
 import {PointLight} from "@babylonjs/core/Lights/pointLight";
 import {SphereBuilder} from "@babylonjs/core/Meshes/Builders/sphereBuilder";
 import {TorusKnotBuilder} from "@babylonjs/core/Meshes/Builders/torusKnotBuilder";
-import {MToonMaterial} from "./shader/babylon-mtoon-material/src";
+// import {MToonMaterial} from "./shader/babylon-mtoon-material/src";
 import {Texture} from "@babylonjs/core/Materials/Textures/texture";
 import {Material} from "@babylonjs/core/Materials/material";
 import {VertexBuffer} from "@babylonjs/core/Buffers/buffer";

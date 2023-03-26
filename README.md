@@ -104,11 +104,12 @@ Babylon.js is licensed under [Apache License 2.0](https://github.com/BabylonJS/B
 
 ## Git Submodule
 - git submodule init
-- git submodule update
+- git submodule update --remote
 - git submodule status
 
 ## Git Submodule Remove
 1. git submodule deinit <your_submodule>
-2. git rm <your_submodule>
-3. git commit-m "Removed submodule"
-4. rm -rf .git/modules/<your_submodule>
+2. rm -rf <your_submodule>
+3. git rm <your_submodule>
+4. git commit-m "Removed submodule"
+5. rm -rf .git/modules/<your_submodule>
