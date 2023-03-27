@@ -4,8 +4,3 @@
 	url = https://github.com/virtual-cast/babylon-vrm-loader.git
 	# https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule
 	branch = alpha
-[submodule "lib/Babylon.js"]
-	path = lib/Babylon.js
-	# url = https://github.com/phantom-software-AZ/Babylon.js.git
-	url = https://github.com/BabylonJS/Babylon.js.git
-	branch = master
