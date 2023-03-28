@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="">
   <head>
     <meta charset="utf-8">
@@ -7,13 +7,31 @@
   </head>
   <body>
     <header></header>
-<!--    <input type="file" id="select-file">-->
+   <input type="file" id="select-file">
     <main id="wrapper" class="container">
         <canvas id="renderCanvas" class="canvas"></canvas>
     </main>
     <script type="module" src="main.test.js"></script>
     <script type="module" src="babylonjs.test.js"></script>
     <footer></footer>
+</body></html> -->
 
-
-</body></html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Babylon.js VRM Loader Test Sandbox</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav>
+            <input id="file-input" type="file" accept=".vci,.vrm">
+        </nav>
+        <main id="wrapper">
+            <canvas id="main-canvas"></canvas>
+        </main>
+        <script src="vendors~main.test.js"></script>
+        <script src="main.test.js"></script>
+    </body>
+</html>
