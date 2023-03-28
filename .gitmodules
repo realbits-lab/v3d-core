@@ -1,6 +1,7 @@
 [submodule "importer/babylon-vrm-loader"]
 	path = src/importer/babylon-vrm-loader
 	# url = https://github.com/phantom-software-AZ/babylon-vrm-loader.git
-	url = https://github.com/virtual-cast/babylon-vrm-loader.git
-	# https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule
-	branch = alpha
+	# url = https://github.com/virtual-cast/babylon-vrm-loader.git
+	url = https://github.com/realbits-lab/babylon-vrm-loader.git
+	# branch = alpha
+	branch = patched
