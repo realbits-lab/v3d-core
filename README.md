@@ -104,6 +104,7 @@ Babylon.js is licensed under [Apache License 2.0](https://github.com/BabylonJS/B
 
 ## Git Submodule
 - git submodule init
+- git submodule sync
 - git submodule update --remote
 - git submodule status
 
