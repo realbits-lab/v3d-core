@@ -128,7 +128,9 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
     this._mainCamera = value;
   }
 
-  public skyBox: v3DSkyBox = null;
+  //* TODO: Patched.
+  // public skyBox: v3DSkyBox = null;
+  public skyBox: v3DSkyBox;
 
   /**
    * Loaded VRM Managers
@@ -173,7 +175,9 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
 
   public constructor(
     readonly engine: Engine,
-    public scene?: Scene,
+    //* TODO: Patched.
+    // public scene?: Scene,
+    public scene: Scene,
     camera?: Camera
   ) {
     console.log("call constructor()");
@@ -369,7 +373,9 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
    * Get corresponding shadow generator for light.
    * @param light Light to get shadow generator
    */
-  public getShadownGenerator(light: IShadowLight): Nullable<ShadowGenerator> {
+  //* TODO: Patched.
+  // public getShadownGenerator(light: IShadowLight): Nullable<ShadowGenerator> {
+  public getShadownGenerator(light: IShadowLight): ShadowGenerator | undefined {
     return this._shadowGenerators.get(light);
   }
 
@@ -527,7 +533,9 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
   }
 
   private enableResize() {
-    this.engine.getRenderingCanvas().onresize = () => {
+  	//* TODO: Patched.
+    // this.engine.getRenderingCanvas().onresize = () => {
+    this.engine.getRenderingCanvas()!.onresize = () => {
       this.engine.resize();
     };
   }
