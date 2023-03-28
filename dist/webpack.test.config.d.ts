@@ -47,6 +47,7 @@ export namespace optimization {
             namespace defaultVendors {
                 const test: RegExp;
                 function name(_module: any, chunks: any, _cacheGroupKey: any): string;
+                function name(_module: any, chunks: any, _cacheGroupKey: any): string;
             }
         }
     }
