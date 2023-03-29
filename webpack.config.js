@@ -56,7 +56,7 @@ const config = [
   Merge.merge(baseConfig, {
     output: {
       library: {
-        // name: 'v3d-core',
+        // name: "v3d-core",
         type: "module",
       },
       filename: "[name].es6.js",
