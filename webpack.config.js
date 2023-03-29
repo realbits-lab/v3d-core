@@ -98,7 +98,7 @@ const config_orig = [
   Merge.merge(baseConfig, {
     output: {
       library: {
-        // name: 'v3d-core',
+        name: "v3d-core",
         type: "module",
       },
       filename: "[name].es6.js",
@@ -109,7 +109,11 @@ const config_orig = [
       outputModule: true,
     },
     externalsType: "module",
-    externals: [/^@babylonjs.*$/],
+    externals: [
+      /^@babylonjs.*$/,
+      /^babylonjs-gltf2interface$/,
+      /^babylon-mtoon-material$/,
+    ],
   }),
   // browser global
   Merge.merge(baseConfig, {
