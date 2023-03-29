@@ -42,16 +42,16 @@ const baseConfig = {
 
 const config = [
   // UMD
-  Merge.merge(baseConfig, {
-    output: {
-      library: {
-        name: "v3d-core",
-        type: "umd",
-      },
-      filename: "[name].module.js",
-      path: path.resolve(__dirname, "dist"),
-    },
-  }),
+  // Merge.merge(baseConfig, {
+  //   output: {
+  //     library: {
+  //       name: "v3d-core",
+  //       type: "umd",
+  //     },
+  //     filename: "[name].module.js",
+  //     path: path.resolve(__dirname, "dist"),
+  //   },
+  // }),
   // ES6
   Merge.merge(baseConfig, {
     output: {
@@ -69,16 +69,16 @@ const config = [
     externalsType: "module",
   }),
   // browser global
-  Merge.merge(baseConfig, {
-    output: {
-      library: {
-        name: "v3d-core",
-        type: "window",
-      },
-      filename: "[name].js",
-      path: path.resolve(__dirname, "dist"),
-    },
-  }),
+  // Merge.merge(baseConfig, {
+  //   output: {
+  //     library: {
+  //       name: "v3d-core",
+  //       type: "window",
+  //     },
+  //     filename: "[name].js",
+  //     path: path.resolve(__dirname, "dist"),
+  //   },
+  // }),
 ];
 
 const config_orig = [
