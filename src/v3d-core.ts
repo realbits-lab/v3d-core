@@ -160,13 +160,13 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
   // VRM doesn't have any UID in metadata. Title can be unfilled too.
   // Filename is the only reasonable ID.
   public getVRMManagerByURI(uri: String) {
-    console.log("call getVRMManagerByURI()");
-    console.log("uri: ", uri);
-    console.log("this.loadedVRMManagers: ", this.loadedVRMManagers);
+    // console.log("call getVRMManagerByURI()");
+    // console.log("uri: ", uri);
+    // console.log("this.loadedVRMManagers: ", this.loadedVRMManagers);
 
     for (const manager of this.loadedVRMManagers) {
-      console.log("manager: ", manager);
-      console.log("manager.uri: ", manager.uri);
+      // console.log("manager: ", manager);
+      // console.log("manager.uri: ", manager.uri);
 
       if (manager.uri === uri) return manager;
     }
@@ -180,10 +180,10 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
     public scene: Scene,
     camera?: Camera
   ) {
-    console.log("call constructor()");
-    console.log("engine: ", engine);
-    console.log("scene: ", scene);
-    console.log("camera: ", camera);
+    // console.log("call constructor()");
+    // console.log("engine: ", engine);
+    // console.log("scene: ", scene);
+    // console.log("camera: ", camera);
 
     // Register
     this.registerVrmPlugin();
@@ -196,7 +196,7 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
     this.enableResize();
 
     if (camera) {
-      console.log("camera: ", camera);
+      // console.log("camera: ", camera);
       this._mainCamera = camera;
       this.scene.switchActiveCamera(camera);
     } else {
@@ -216,7 +216,7 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
    * Make background transparent.
    */
   public transparentBackground() {
-    console.log("call transparentBackground()");
+    // console.log("call transparentBackground()");
 
     this.scene.clearColor.a = 0;
   }
@@ -268,8 +268,8 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
    * @param radius rotation radius
    */
   private addCamera(radius: number = 3) {
-    console.log("call addCamera()");
-    console.log("radius: ", radius);
+    // console.log("call addCamera()");
+    // console.log("radius: ", radius);
 
     const camera = new ArcRotateCamera(
       "V3DMainCamera",
@@ -298,9 +298,9 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
    * @param radius rotation radius
    */
   public attachCameraTo(manager: VRMManager, radius: number = 3) {
-    console.log("call attachCameraTo()");
-    console.log("manager: ", manager);
-    console.log("radius: ", radius);
+    // console.log("call attachCameraTo()");
+    // console.log("manager: ", manager);
+    // console.log("radius: ", radius);
 
     const camera = new ArcRotateCamera(
       "V3DArcCamera" + manager.cameras.length,
@@ -481,7 +481,7 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
     rootUrl: string,
     sceneFilename?: string | File
   ): Promise<Scene> {
-    console.log("call AppendAsync");
+    // console.log("call AppendAsync");
 
     return SceneLoader.AppendAsync(rootUrl, sceneFilename, this.scene);
   }
@@ -500,11 +500,12 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
 
   // GLTFLoaderExtensionObserver
   public onLoadReady() {
-    console.log("call onLoadReady()");
-    console.log(
-      "this._onLoadCompleteCallbacks: ",
-      this._onLoadCompleteCallbacks
-    );
+    // console.log("call onLoadReady()");
+    // console.log(
+    //   "this._onLoadCompleteCallbacks: ",
+    //   this._onLoadCompleteCallbacks
+    // );
+
     for (const f of this._onLoadCompleteCallbacks) {
       f();
     }
@@ -547,32 +548,34 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
 
   // TODO Unregister
   private registerVrmExtension() {
-    console.log("call registerVrmExtension()");
-    console.log("VRMLoaderExtension.NAME: ", VRMLoaderExtension.NAME);
+    // console.log("call registerVrmExtension()");
+    // console.log("VRMLoaderExtension.NAME: ", VRMLoaderExtension.NAME);
 
     // ローダーに登録する
     GLTFLoader.RegisterExtension(VRMLoaderExtension.NAME, (loader) => {
-      console.log("loader: ", loader);
-      console.log("this: ", this);
+      // console.log("loader: ", loader);
+      // console.log("this: ", this);
+
       return new VRMLoaderExtension(loader, this);
     });
   }
 
   private registerVrmPlugin() {
-    console.log("call registerVrmPlugin()");
-    console.log("SceneLoader: ", SceneLoader);
-    console.log(
-      "SceneLoader.GetPluginForExtension(.vrm).name: ",
-      SceneLoader.GetPluginForExtension(".vrm").name
-    );
+    // console.log("call registerVrmPlugin()");
+    // console.log("SceneLoader: ", SceneLoader);
+    // console.log(
+    //   "SceneLoader.GetPluginForExtension(.vrm).name: ",
+    //   SceneLoader.GetPluginForExtension(".vrm").name
+    // );
 
     // if (
     //   SceneLoader &&
     //   SceneLoader.GetPluginForExtension(".vrm").name === "vrm"
     // ) {
     if (SceneLoader) {
-      console.log("try to call SceneLoader.RegisterPlugin()");
-      console.log("this._vrmFileLoader: ", this._vrmFileLoader);
+      // console.log("try to call SceneLoader.RegisterPlugin()");
+      // console.log("this._vrmFileLoader: ", this._vrmFileLoader);
+
       SceneLoader.RegisterPlugin(this._vrmFileLoader);
     }
   }
