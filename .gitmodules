@@ -5,3 +5,6 @@
 	url = https://github.com/realbits-lab/babylon-vrm-loader.git
 	# branch = alpha
 	branch = patch
+[submodule "lib/Babylon.js"]
+	path = lib/Babylon.js
+	url = https://github.com/BabylonJS/Babylon.js.git
