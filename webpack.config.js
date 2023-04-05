@@ -51,6 +51,7 @@ const config = [
   //     filename: "[name].module.js",
   //     path: path.resolve(__dirname, "dist"),
   //   },
+  //   externals: [/^@babylonjs.*$/],
   // }),
   // ES6
   Merge.merge(baseConfig, {

@@ -12,10 +12,10 @@ import type { VRMManager } from "../src/importer/babylon-vrm-loader/src/vrm-mana
 
 import { GLTFLoader } from "@babylonjs/loaders/glTF/2.0";
 
-import "@babylonjs/core/Helpers/sceneHelpers";
-import "@babylonjs/core/Meshes/Builders/sphereBuilder";
-import "@babylonjs/core/Meshes/Builders/torusKnotBuilder";
-import "@babylonjs/inspector";
+// import "@babylonjs/core/Helpers/sceneHelpers";
+// import "@babylonjs/core/Meshes/Builders/sphereBuilder";
+// import "@babylonjs/core/Meshes/Builders/torusKnotBuilder";
+// import "@babylonjs/inspector";
 // eslint-disable-next-line import/no-internal-modules
 import * as BVL from "./importer/babylon-vrm-loader/src/index";
 

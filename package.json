@@ -3,10 +3,11 @@
   "version": "0.0.7",
   "description": "WebGL-based humanoid model rendering engine.",
   "main": "dist/v3dcore.es6.js",
+  "tempMain": "dist/v3dcore.module.js",
   "scripts": {
     "test": "echo \\\"Error: no test2 specified\\\" && exit 1",
-    "build": "webpack --config webpack.config.js --watch --progress",
-    "build:test": "webpack --config webpack.test.config.js --watch --progress",
+    "build:production": "webpack --config webpack.config.js --watch --progress",
+    "build:development": "webpack --config webpack.test.config.js --watch --progress",
     "lint": "tslint -p .",
     "debug": "webpack-dev-server --config webpack.test.config.js"
   },
@@ -38,6 +39,7 @@
   "author": "Phantom Development",
   "license": "MPL-2.0",
   "devDependencies": {
+    "@dev/build-tools": "file:lib/Babylon.js/packages/dev/buildTools",
     "@types/node": "^16.7.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
@@ -57,7 +59,9 @@
     "@babylonjs/loaders": "5.19.0",
     "@babylonjs/materials": "5.19.0",
     "@babylonjs/serializers": "5.19.0",
-    "babylonjs-gltf2interface": "5.0.0",
-    "babylon-mtoon-material": "5.0.0"
+    "@dev/core": "file:lib/Babylon.js/packages/dev/core",
+    "@lts/core": "file:lib/Babylon.js/packages/lts/core",
+    "babylon-mtoon-material": "5.0.0",
+    "babylonjs-gltf2interface": "5.0.0"
   }
 }
