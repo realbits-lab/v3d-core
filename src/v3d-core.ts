@@ -185,6 +185,9 @@ export class V3DCore implements GLTFLoaderExtensionObserver {
     // console.log("scene: ", scene);
     // console.log("camera: ", camera);
 
+    //* TODO: Patched.
+    SceneLoader.ShowLoadingScreen = false;
+
     // Register
     this.registerVrmPlugin();
     this.registerVrmExtension();
