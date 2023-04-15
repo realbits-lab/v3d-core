@@ -11,3 +11,4 @@
 [submodule "src/shader/babylon-mtoon-material"]
 	path = src/shader/babylon-mtoon-material
 	url = https://github.com/realbits-lab/babylon-mtoon-material.git
+	branch = patch
