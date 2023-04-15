@@ -4,6 +4,7 @@ const terser = require("terser-webpack-plugin");
 
 const baseConfig = {
   mode: "production",
+  devtool: "source-map",
   entry: {
     v3dcore: path.resolve(__dirname, "src", "index"),
   },
@@ -27,17 +28,20 @@ const baseConfig = {
     symlinks: false,
   },
   experiments: {
+    futureDefaults: true,
     topLevelAwait: true,
   },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new terser({
-        extractComments: false,
-      }),
-    ],
-  },
-  target: ["web"],
+  target: ["es2021"],
+  //* TODO: Handle later.
+  // target: ["web"],
+  // optimization: {
+  //   minimize: true,
+  //   minimizer: [
+  //     new terser({
+  //       extractComments: false,
+  //     }),
+  //   ],
+  // },
 };
 
 const config = [
@@ -57,17 +61,16 @@ const config = [
   Merge.merge(baseConfig, {
     output: {
       library: {
-        // name: "v3d-core",
         type: "module",
       },
       filename: "[name].es6.js",
       path: path.resolve(__dirname, "dist"),
       environment: { module: true },
     },
+    externalsType: "module",
     experiments: {
       outputModule: true,
     },
-    externalsType: "module",
   }),
   // browser global
   // Merge.merge(baseConfig, {

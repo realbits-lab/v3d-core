@@ -1,21 +1,14 @@
 {
   "name": "v3d-core-realbits",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "WebGL-based humanoid model rendering engine.",
   "main": "dist/v3dcore.es6.js",
-  "tempMain": "dist/v3dcore.module.js",
-  "scripts": {
-    "test": "echo \\\"Error: no test2 specified\\\" && exit 1",
-    "build:production": "webpack --config webpack.config.js --watch --progress",
-    "build:development": "webpack --config webpack.test.config.js --watch --progress",
-    "lint": "tslint -p .",
-    "debug": "webpack-dev-server --config webpack.test.config.js"
-  },
   "keywords": [
     "babylon.js",
     "VRM",
     "MToon",
-    "WebGL"
+    "WebGL",
+    "Realbits"
   ],
   "files": [
     "dist",
@@ -36,20 +29,21 @@
     "dist/src/scene",
     "dist/src/utilities"
   ],
-  "author": "Phantom Development",
   "license": "MPL-2.0",
-  "devDependencies": {
-    "@dev/build-tools": "file:lib/Babylon.js/packages/dev/buildTools",
-    "@types/node": "^16.7.1",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "@types/webpack": "^5.28.0",
-    "terser-webpack-plugin": "^5.2.4",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.3.5",
-    "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
+  "author": {
+    "name": "Phantom Development and Realbits dev team",
+    "email": "dev.realbits@gmail.com",
+    "url": "https://realbits-lab.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realbits-lab/v3d-core"
+  },
+  "scripts": {
+    "build:production": "webpack --config webpack.config.js --watch --progress",
+    "build:development": "webpack --config webpack.test.config.js --watch --progress",
+    "lint": "tslint -p .",
+    "debug": "webpack-dev-server --config webpack.test.config.js"
   },
   "dependencies": {
     "@babylonjs/core": "5.19.0",
@@ -63,5 +57,18 @@
     "@lts/core": "file:lib/Babylon.js/packages/lts/core",
     "babylon-mtoon-material": "5.0.0",
     "babylonjs-gltf2interface": "5.0.0"
+  },
+  "devDependencies": {
+    "@dev/build-tools": "file:lib/Babylon.js/packages/dev/buildTools",
+    "@types/node": "^16.7.1",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/webpack": "^5.28.0",
+    "terser-webpack-plugin": "^5.2.4",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
   }
 }
