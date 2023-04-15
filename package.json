@@ -55,7 +55,6 @@
     "@babylonjs/serializers": "5.19.0",
     "@dev/core": "file:lib/Babylon.js/packages/dev/core",
     "@lts/core": "file:lib/Babylon.js/packages/lts/core",
-    "babylon-mtoon-material": "5.0.0",
     "babylonjs-gltf2interface": "5.0.0"
   },
   "devDependencies": {

@@ -13,6 +13,10 @@ const baseConfig = {
   module: {
     rules: [
       {
+        test: /\.(vert|frag)$/,
+        type: "asset/source",
+      },
+      {
         test: /\.ts$/,
         exclude: [path.resolve(__dirname, "/lib")],
         use: "ts-loader",
@@ -28,7 +32,7 @@ const baseConfig = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "node_modules")],
-    extensions: [".js", ".ts"],
+    extensions: [".js", ".ts", ".vert", ".frag"],
     symlinks: false,
   },
   experiments: {
