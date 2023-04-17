@@ -10,10 +10,10 @@ This project aims to be an easy-to-use library for rendering 3D and pseudo-2D hu
 
 - Contains one simple API for interacting with scene and models
 - Supports `.vrm` file loading, including:
-    + Unity Humanoid bone mapping
-    + [BlendShape](https://vrm.dev/univrm/components/univrm_blendshape/) morphing
-    + [Secondary Animation](https://vrm.dev/univrm/components/univrm_secondary/)
-    + [MToonMaterial](https://github.com/phantom-software-AZ/babylon-mtoon-material)
+  - Unity Humanoid bone mapping
+  - [BlendShape](https://vrm.dev/univrm/components/univrm_blendshape/) morphing
+  - [Secondary Animation](https://vrm.dev/univrm/components/univrm_secondary/)
+  - [MToonMaterial](https://github.com/phantom-software-AZ/babylon-mtoon-material)
 
 ## Usage
 
@@ -25,7 +25,7 @@ npm install v3d-core
 
 ### In browser
 
-*Some older browsers may not be supported.*
+_Some older browsers may not be supported._
 
 Please see [examples/browser](./examples/browser) for an example.
 
@@ -37,7 +37,7 @@ Currently, this is not possible since we use a modified Babylon.js fork.
 
 ### For node.js and webpack
 
-*All modules support ES6 imports.*
+_All modules support ES6 imports._
 
 Please see [index-test.ts](./src/index-test.ts) for an example.
 
@@ -76,6 +76,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md).
    ```
 
    Output files will be under `dist` folder.
+
 ## Debugging
 
 Go to root folder of this repository and run:
@@ -101,16 +102,21 @@ see [LICENSE](./LICENSE).
 
 Babylon.js is licensed under [Apache License 2.0](https://github.com/BabylonJS/Babylon.js/blob/master/license.md).
 
-
 ## Git Submodule
+
 - git submodule init
 - git submodule sync
 - git submodule update --remote
 - git submodule status
 
 ## Git Submodule Remove
+
 1. git submodule deinit <your_submodule>
 2. rm -rf <your_submodule>
 3. git rm <your_submodule>
 4. git commit -m "Removed submodule"
 5. rm -rf .git/modules/<your_submodule>
+
+## For babylon-mtoon-material debugging with es6 option
+
+- Patch material-value-binding-merger.ts and vrm-material-generator.ts file in babylon-vrm-loader package.
