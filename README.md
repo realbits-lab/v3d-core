@@ -120,4 +120,5 @@ Babylon.js is licensed under [Apache License 2.0](https://github.com/BabylonJS/B
 ## For babylon-mtoon-material debugging with es6 option
 
 - Patch material-value-binding-merger.ts and vrm-material-generator.ts file in babylon-vrm-loader package.
+   - Don't use local file for production, but only for development.
 - copy shader/babylon-mtoon-material/src/shaders to dist/src/babylon-mtoon-material/src
